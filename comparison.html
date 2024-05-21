@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparing Two Different Stuff+ Methods</title>
+    <link rel = "stylesheet" type="text/css" href = "css/reset.css">
+    <link rel = "stylesheet" type="text/css" href = "css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="#main" class="skip-link">Skip to Main Content</a>
+        <button class="hamburger" aria-label="Menu" id="menuToggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <nav class = "navigation" id="navigation">
+            <ul class= "navigation_ul">
+                <li><a href = "intro.html">Home</a></li>
+                <li><a href = "methodology.html">Methodology</a></li>
+                <li><a href = "video_breakdown.html">Video Breakdown</a></li>
+                <li><a href = "machine_learning_explanation.html">Machine Learning</a></li>
+                <li><a href = "comparison.html" class = "current">Comparison</a></li>
+                <li><a href = "results.html">Results</a></li>
+                <li><a href = "visualizations.html">Additional Questions?</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id = "main" class = "intro-comparison">
+        <div class = "overview">
+            <h1 class = "intro-h1">Comparing Two Different Stuff+ Methods</h1>
+        </div>
+        <button id="grayscaleBtn">Grayscale On/Off</button>
+
+        <section class='text'>
+            <details>
+                <summary>Understanding Pitch-Level Metrics</summary>
+                <p>As more and more pitching data becomes available to the public, the attempt to understand that data has only grown. One of the premier ways that has been used to understand these Pitch-Level numbers is the creation of Stuff-like metrics, (like Stuff+, Location+, and Pitching+) that use machine learning to more accurately predict pitch performance. Recently, I had the pleasure of creating these models for Triple-A Pitchers, which were published on Prospects Live. The explanation behind the models and the link to the data is <a href="https://www.prospectslive.com/prospects-live/2023/12/1/an-introduction-to-the-application-of-stuff-models-on-triple-a-data">here</a> if you’re ever so inclined, but reading it all isn’t necessary for this piece.</p>
+
+                <p>Building the models, it kept dawning on me that while these models are helpful, they are admittedly limited. After getting the chance to have a conversation in a chance encounter with Eno Sarris at the Winter Meetings regarding said limitations, I left with the hope of creating something better. In identifying the current weaknesses of the metrics being used, the primary one worth noting was that these did not consider the prior pitch that was thrown. For example, a high four-seam’s Pitching+ gives no consideration to how it plays off the slider that was down-and-away beforehand. It is somewhat established in general baseball knowledge that a given pitch can be more effective depending on the prior pitch thrown. But with the lack of consideration by notorious models, perhaps it does not.</p>
+                    
+                <p>This turns into a hypothesis test - either the current models are more effective at evaluating pitching with their current considerations (the null), or they forgot a deeply important component and general baseball knowledge is right (the alternative). The creation of Arsenal+ aims to answer this question and further evaluate the various elements of pitching.</p>
+            </details>
+            <details>
+                <summary>What Is Arsenal+?</summary>
+                <p>Arsenal+ takes into account the stuff and location of each pitch within its type, along with the consideration of the prior pitch type and the differences between them. While Stuff+, Location+, and Pitching+ focus on model selection, Arsenal+ introduces a novel approach, allowing for further adjustments as needed.</p>
+                <p>The metric was developed and tested using both 2023 Triple-A Statcast data and 2022-2023 MLB Statcast data. To enhance accuracy, I followed a similar process to the one used in advancing the Stuff+ model. Variable selection involved incorporating the same variables as in Pitching+, with additional variables for the differences from the last pitch and dummy variables for the preceding pitch type. The independent variables pertaining to Pitching+ primarily addressed pitch movement, acceleration, and end-location. For the difference aspects, variables like velocity and velocity_diff were used to quantify the changes from the preceding pitch. Dummy variables were employed to indicate the type of the preceding pitch, providing a more comprehensive assessment of pitching arsenals.</p>
+                <p>Pitches were grouped by plate appearance (PA), with the first pitch of each PA trained solely on Pitching variables. Although there was debate regarding the inclusion of the first pitch, it remained in the model due to its potential influence on the subsequent PA. A dummy variable was introduced to distinguish when a pitch was the first of a PA.</p>
+                <p>For the dependent variable, all Triple-A models were adjusted to a 2023 AAA RE288 basis for run value, with each change in run expectancy derived from the alterations in base-out-count states. This differs slightly from the initial model, which relied on a machine-learning model to predict runs based on base-count states. In the MLB Statcast data, the delta run expectancy of each pitch served as the dependent variable.</p>
+            </details>
+        </section>
+
+    <button id="scrollToTopBtn" title="Go to top">Top</button>
+    </main>
+    
+    <footer>
+        <ul class="socials">
+            <li><a href="https://medium.com/@genocous">Blog</a></li>
+            <li><a href="https://twitter.com/genocous16">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/eugene-cousino/">LinkedIn</a></li>
+        </ul>
+        <div class="footer-content">
+            <h2>Stuff+ Project</h2>
+            <p>This site hosts a Stuff+ analysis of the entire 2023 season. We used Fangraphs for informational content, as well as Baseball Savant for video. Photos belong to their respective owners.
+            </p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Site created by Eugene Cousino and Ian Chu. Feel free to contact us with questions: genocous@umich.edu, mrianchu@umich.edu</p>
+        </div>
+    </footer>
+</body>
+</html>

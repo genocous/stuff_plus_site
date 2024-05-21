@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <link rel = "stylesheet" type="text/css" href = "css/reset.css">
+    <link rel = "stylesheet" type="text/css" href = "css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="#main" class="skip-link">Skip to Main Content</a>
+        <button class="hamburger" aria-label="Menu" id="menuToggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <nav class = "navigation" id="navigation">
+            <ul class= "navigation_ul">
+                <li><a href = "intro.html">Home</a></li>
+                <li><a href = "methodology.html">Methodology</a></li>
+                <li><a href = "video_breakdown.html" class = "current">Video Breakdown</a></li>
+                <li><a href = "machine_learning_explanation.html">Machine Learning</a></li>
+                <li><a href = "comparison.html">Comparison</a></li>
+                <li><a href = "results.html">Results</a></li>
+                <li><a href = "visualizations.html">Additional Questions?</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main id = "main" class = "intro-video">
+        <div class = "overview">
+            <h1 class="intro-h1">What Does a Good Stuff+ Look Like?</h1>
+        </div>
+        <button id="grayscaleBtn">Grayscale On/Off</button>
+
+        <section>
+            <div class="top-row">
+                <ul>
+                    <li>Emmanuel Clase</li>
+                    <li>Stuff+: 613</li>
+                    <li>Velocity: 102.8</li>
+                    <li>Spin Rate: 2656</li>
+                    <li>Induced Vertical Break: 11.52</li>
+                    <li>Horizontal Break: 0.12</li>
+                    <li>Differential Break: 11.4</li>
+                </ul>
+                <div class="video-description">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="videos/Clase_vs_Arozarena.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <p>Emmanuel Clase is one of the most electric relievers in the game today. He features a cutter that sits easily in triple digits, and is incredibly hard for hitters to handle. Cutters are classified as fastballs in this model, and it is a little surprising that this was chosen. He generates lots of spin on that pitch, making it a tight but sharp break. That coupled with his controlled delivery and explosive release make life difficult for hitters. Clase's average fastball Stuff+ is ______. This pitch came in as the highest rated pitch by Stuff+ according to the model, and it is not hard to see why.</p>
+        </section>
+
+        <section>
+            <div class="top-row">
+                <ul>
+                    <li>Ryan Helsley</li>
+                    <li>Stuff+: 562</li>
+                    <li>Velocity: 100.5</li>
+                    <li>Spin Rate: 2767</li>
+                    <li>Induced Vertical Break: 22.2</li>
+                    <li>Horizontal Break: 3.2</li>
+                    <li>Differential Break: 19</li>
+                </ul>
+                <div class="video-description">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="videos/Helsley_vs_Bichette.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <p>Ryan Helsley generated the highest Stuff+ for an individual 4-Seam fastball, and when you peruse the metrics, you can see just how elite of a pitch it is. The velocity alone is elite, but the movement profile is outstanding, and would be tough to handle from any velocity threshold. When your differential break is approaching 20, you are doing something right. It surprised me that this pitch was not higher in the zone, as I was expecting the highest rated 4-seam fastball to play up in the zone. However, 100 painted on the outside corner, low and away from a right handed hitter will play very well. </p>
+        </section>
+
+        <section>    
+            <div class="top-row">
+                <ul>
+                    <li>Camilo Doval</li>
+                    <li>Stuff+: 509</li>
+                    <li>Velocity: 102.4</li>
+                    <li>Spin Rate: 2491</li>
+                    <li>Induced Vertical Break: 13.3</li>
+                    <li>Horizontal Break: 5.4</li>
+                    <li>Differential Break: 7.92</li>
+                </ul>
+                <div class="video-description">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="videos/Doval_vs_Nimmo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <p>Another triple digit cutter. It is easy to see why Doval is regarded as one of the most electric closers in the game right now. His cutter is lethal against hitters on both sides of the plate, evidenced by him tying up Nimmo on the inner half of the plate to lock up the save. What astounds me the most about Doval is the ease and balance of his delivery before he goes to the plate, and then seeing him explode as he hits the gas pedal towards the plate. His unique release point helps him as well when calculating Stuff+. It is noteworthy that his cutter has more total movement than Clase's, but his differential break is lower. Differential break is more important for 4-seam fastballs, but the model is likely accounting for that in the difference between these two pitches. </p>
+        </section>
+
+        <section>
+            <div class="top-row">
+                <ul>
+                    <li>Emmanuel Clase</li>
+                    <li>Stuff+: 506</li>
+                    <li>Velocity: 102.4</li>
+                    <li>Spin Rate: 2491</li>
+                    <li>Induced Vertical Break: 11.5</li>
+                    <li>Horizontal Break: 0.5</li>
+                    <li>Differential Break: 11.04</li>
+                </ul>
+                <div class="video-description">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="videos/Clase_vs_Franco.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <p>Here is a brief description of Video 2.</p>
+        </section>
+
+        <section>
+            <div class="top-row">
+                <ul>
+                    <li>Ryne Nelson</li>
+                    <li>Stuff+: 500</li>
+                    <li>Velocity: 93.9</li>
+                    <li>Spin Rate: 2268</li>
+                    <li>Induced Vertical Break: 24.8</li>
+                    <li>Horizontal Break: 7.8</li>
+                    <li>Differential Break: 17.04</li>
+                </ul>
+                <div class="video-description">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="videos/Nelson_vs_Bogaerts.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>  
+                </div>
+            </div>
+            <p>Here is a brief description of Video 2.</p>
+        </section>
+
+        <section>
+            <div class="top-row">
+                <ul>
+                    <li>Jacob DeGrom</li>
+                    <li>Stuff+: 478</li>
+                    <li>Velocity: 101</li>
+                    <li>Spin Rate: 2571</li>
+                    <li>Induced Vertical Break: 18.8</li>
+                    <li>Horizontal Break: 7.7</li>
+                    <li>Differential Break: 11.1</li>
+                </ul>
+                <div class="video-description">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="videos/Degrom_vs_Noda.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <p>Poor Ryan Noda. He was just trying to work an at-bat and make contact when DeGrom reached back and fired 101 right by him on the outside corner.
+                All Noda could do was wave the bat at it and hope to make contact, but the end result was a foul tip back into the glove for the strikeout.
+            </p>
+        </section>
+
+        <section>
+            <div class="top-row">
+                <ul>
+                    <li>Justin Verlander</li>
+                    <li>Stuff+: 303</li>
+                    <li>Velocity: 94.2</li>
+                    <li>Spin Rate: 2389</li>
+                    <li>Induced Vertical Break: 23.3</li>
+                    <li>Horizontal Break: 5.8</li>
+                    <li>Differential Break: 17.5</li>
+                </ul>
+                <div class="video-description">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="videos/Verlander_vs_Pereira.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <p>Here is a brief description of Video 1.</p>
+        </section>
+        <button id="scrollToTopBtn" title="Go to top">Top</button>
+    </main>
+
+    <footer>
+        <ul class="socials">
+            <li><a href="https://medium.com/@genocous">Blog</a></li>
+            <li><a href="https://twitter.com/genocous16">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/eugene-cousino/">LinkedIn</a></li>
+        </ul>
+        <div class="footer-content">
+            <h2>Stuff+ Project</h2>
+            <p>This site hosts a Stuff+ analysis of the entire 2023 season. We used Fangraphs for informational content, as well as Baseball Savant for video. Photos belong to their respective owners.
+            </p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Site created by Eugene Cousino and Ian Chu. Feel free to contact us with questions: genocous@umich.edu, mrianchu@umich.edu</p>
+        </div>
+    </footer>
+</body>
+</html>

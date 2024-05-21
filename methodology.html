@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology</title>
+    <link rel = "stylesheet" type="text/css" href = "css/reset.css">
+    <link rel = "stylesheet" type="text/css" href = "css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="#main" class="skip-link">Skip to Main Content</a>
+        <button class="hamburger" aria-label="Menu" id="menuToggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <nav class = "navigation" id="navigation">
+            <ul class= "navigation_ul">
+                <li><a href = "intro.html">Home</a></li>
+                <li><a href = "methodology.html" class = "current">Methodology</a></li>
+                <li><a href = "video_breakdown.html">Video Breakdown</a></li>
+                <li><a href = "machine_learning_explanation.html">Machine Learning</a></li>
+                <li><a href = "comparison.html">Comparison</a></li>
+                <li><a href = "results.html">Results</a></li>
+                <li><a href = "visualizations.html">Additional Questions?</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main id="main" class = 'intro-methodology'>
+        <div class = "overview">
+            <h1 class = "intro-h1">Methodology</h1>
+        </div>
+        <button id="grayscaleBtn">Grayscale On/Off</button>
+
+        <section class = 'text'>
+            <details>
+                <summary>Data Extraction and Cleaning</summary>
+                <p>This data was gathered from Statcast using the Pybaseball library in Python. I selected specific columns of interest and cleaned the data by renaming the columns to make them more descriptive. I adjusted player names from "Last_Name, First_Name" to "First_Name, Last_Name" for both hitters and pitchers in the dataset.</p>
+            </details>
+            <details>
+                <summary>Data Standardization</summary>
+                <p>Next, I standardized the pitch type column by mapping various pitch types to four categories: Fastball, Changeup, Curveball, and Slider. Some pitches were grouped with others that did not perfectly align, but for modeling purposes, these groupings were acceptable.
+
+                I also cleaned the metrics by transforming horizontal break into absolute values, creating a new column for differential break (vertical break minus horizontal break), and establishing new columns for differences in velocity, horizontal break, and induced vertical break. These columns were tested in the model later to assess their utility.</p>
+            </details>
+            <details>
+                <summary>Feature Selection and Engineering</summary>
+                <p>Following that, I created two columns in the dataframe: 'whiff' and 'swing'. The 'whiff' column increments by 1 when the batter swings and misses or foul tips a pitch into the catcher's glove. The 'swing' column increments by 1 whenever there is a swing. I filtered the data into a new dataframe (df_swing) based on whether the hitter swung. Additionally, I created a new dataframe (df_rhp_fb) containing only right-handed pitchers and fastballs. I removed all NaN values from both dataframes to ensure the model could run without missing values.
+
+                Subsequently, I began the process of feature selection. I took a random sample of 10% of the fastballs thrown by right-handed pitchers to right-handed hitters and ran a Random Forest model. Analyzing the model's feature importances guided my feature engineering efforts, which included squaring velocity, multiplying extension and induced vertical break, and cubing spin rate. Running the Random Forest model on the larger RHP dataframe yielded a mean squared error (MSE) of 0.09 and an R-squared score of -0.03, indicating the model was not a good fit for the data. I continue to work on feature engineering and hyperparameter tuning to improve model performance.</p>
+            </details>
+            <details>
+                <summary>Modeling</summary>
+                <p>I explored another machine learning model: the XGBoost model. I adjusted the features further for this model and obtained initial results. The model produced an MSE of 0.086 and an R-squared score of 0.013, showing improvement over the Random Forest model but still needing refinement. I applied the model to the dataframe to generate results for right-handed pitchers, even though the dataframe included both left-handed and right-handed hitters.</p>
+            </details>
+        </section>
+        <button id="scrollToTopBtn" title="Go to top">Top</button>
+    </main>
+    <footer>
+        <ul class="socials">
+            <li><a href="https://medium.com/@genocous">Blog</a></li>
+            <li><a href="https://twitter.com/genocous16">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/eugene-cousino/">LinkedIn</a></li>
+        </ul>
+        <div class="footer-content">
+            <h2>Stuff+ Project</h2>
+            <p>This site hosts a Stuff+ analysis of the entire 2023 season. We used Fangraphs for informational content, as well as Baseball Savant for video. Photos belong to their respective owners.
+            </p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Site created by Eugene Cousino and Ian Chu. Feel free to contact us with questions: genocous@umich.edu, mrianchu@umich.edu</p>
+        </div>
+    </footer>
+</body>
+</html>

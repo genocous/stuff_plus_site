@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning</title>
+    <link rel = "stylesheet" type="text/css" href = "css/reset.css">
+    <link rel = "stylesheet" type="text/css" href = "css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="#main" class="skip-link">Skip to Main Content</a>
+        <button class="hamburger" aria-label="Menu" id="menuToggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <nav class = "navigation" id="navigation">
+            <ul class= "navigation_ul">
+                <li><a href = "intro.html">Home</a></li>
+                <li><a href = "methodology.html">Methodology</a></li>
+                <li><a href = "video_breakdown.html">Video Breakdown</a></li>
+                <li><a href = "machine_learning_explanation.html" class = "current">Machine Learning</a></li>
+                <li><a href = "comparison.html">Comparison</a></li>
+                <li><a href = "results.html">Results</a></li>
+                <li><a href = "visualizations.html">Additional Questions?</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id = "main" class = "intro_ml_explanation">
+        <div class = "overview">
+            <h1 class = "intro-h1">Machine Learning</h1>
+        </div>
+        <button id="grayscaleBtn">Grayscale On/Off</button>
+
+        <section class = 'text'>
+            <details>
+                <summary>What is Machine Learning?</summary>
+                <p>Machine learning is a field of artificial intelligence focused on developing algorithms that enable computers to learn from and make predictions or decisions based on data. The core idea is to build models that can recognize patterns in data and use those patterns to make predictions or decisions without being explicitly programmed for each task. These models learn from examples, iteratively improving their performance over time.</p>
+            </details>
+            <details>
+                <summary>XG Boost Model</summary>
+                <p>XG Boost, short for Extreme Gradient Boosting, is a powerful machine learning algorithm that belongs to the family of ensemble learning methods. It works by sequentially adding models (typically decision trees) to correct the errors made by previous models. Each subsequent model focuses on the mistakes of its predecessors, thereby improving the overall predictive accuracy. XG Boost is known for its efficiency, scalability, and high performance, making it a popular choice for various machine learning tasks, including classification and regression.</p>
+            </details>
+            <details>
+                <summary>Random Forest Model</summary>
+                <p>Random Forest is another ensemble learning algorithm widely used in machine learning. It operates by constructing a multitude of decision trees during training and outputting the mode of the classes (classification) or the mean prediction (regression) of the individual trees. Each decision tree in the Random Forest is trained on a random subset of the training data, and at each node of the tree, a random subset of features is considered for splitting. This randomness helps to decorrelate the individual trees, reducing overfitting and improving the overall generalization performance of the model. Random Forest is robust, versatile, and less prone to overfitting compared to some other machine learning algorithms, making it a popular choice for both classification and regression tasks, especially when dealing with high-dimensional data.</p>
+            </details>
+        </section>
+        <button id="scrollToTopBtn" title="Go to top">Top</button>
+    </main>
+
+    <footer>
+        <ul class="socials">
+            <li><a href="https://medium.com/@genocous">Blog</a></li>
+            <li><a href="https://twitter.com/genocous16">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/eugene-cousino/">LinkedIn</a></li>
+        </ul>
+        <div class="footer-content">
+            <h2>Stuff+ Project</h2>
+            <p>This site hosts a Stuff+ analysis of the entire 2023 season. We used Fangraphs for informational content, as well as Baseball Savant for video. Photos belong to their respective owners.
+            </p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Site created by Eugene Cousino and Ian Chu. Feel free to contact us with questions: genocous@umich.edu, mrianchu@umich.edu</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Journey into Baseball Analytics: Stuff+</title>
+    <link rel = "stylesheet" type="text/css" href = "css/reset.css">
+    <link rel = "stylesheet" type="text/css" href = "css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="#main" class="skip-link">Skip to Main Content</a>
+
+        <button class="hamburger" aria-label="Menu" id="menuToggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+
+        <nav class = "navigation" id="navigation">
+            <ul class= "navigation_ul">
+                <li><a href = "intro.html" class = "current">Home</a></li>
+                <li><a href = "methodology.html">Methodology</a></li>
+                <li><a href = "video_breakdown.html">Video Breakdown</a></li>
+                <li><a href = "machine_learning_explanation.html">Machine Learning</a></li>
+                <li><a href = "comparison.html">Comparison</a></li>
+                <li><a href = "results.html">Results</a></li>
+                <li><a href = "visualizations.html">Additional Questions?</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id = "main" class = "intro-main">
+        <div class = "overview">
+            <h1 class = "intro-h1">A Journey into Baseball Analytics: Stuff+</h1>
+        </div>
+        <button id="grayscaleBtn">Grayscale On/Off</button>
+
+        <section class = 'text'>
+            <details>
+                <summary>Introduction to FanGraphs</summary>
+                <p> FanGraphs is one of the premier sources for baseball statistics and analytics, providing in-depth data and insights for players, teams, and fans. The platform offers a plethora of traditional and advanced metrics to help evaluate player performance and team strategies, including offensive and defensive statistics, projections, and analysis from top experts in the field.</p>
+            </details>
+            <details>
+                <summary>Understanding Stuff+</summary>
+                <p>FanGraphs is known for its commitment to innovation in baseball analytics. The platform often introduces and highlights new metrics that offer fresh perspectives on player and team performance. The metric we are analyzing is called <span class="highlight">Stuff+</span>, a measure of the quality and effectiveness of a pitcher's pitch. Stuff+ was developed by Driveline Baseball, a leading player development organization known for its data-driven training methods. Stuff+ looks only at the physical characteristics of a pitch, providing a comprehensive score based on various factors such as pitch velocity, spin rate, movement profile, release point, and extension.</p>
+            </details>
+            <details>
+                <summary>Evaluating Pitches with Stuff+</summary>
+                <p>A pitcher’s secondary pitches are defined based on their primary fastball — with “primary” defined by usage in an outing — and so are judged by velocity and movement differentials along with raw velocity and movement numbers. The model also includes “axis differential,” a statistic that attempts to describe the difference between the movement expected by spin alone and the observed movement affected by the phenomenon described as seam-shifted wake.</p>
+                <p>Stuff+ was trained against run values, so even if the research community is divided about how much a pitcher can control weak contact, the model includes an inherent nod to the possibility that they do possess some of that ability. The importance of release point in the model also suggests that Stuff+ includes some deception — you’ll find some pitchers with unique release point and movement combinations score very well despite lower velocities, at least. Vertical attack angle is not explicitly in the model, but it is captured by the interaction between release points and movement.</p>
+                <p>Generally, the model aims to capture the “nastiest” pitches in baseball, using a decision tree-based model to capture the nonlinear relationships that exist across release points, velocities, pitch movement, and more.</p>
+            </details>
+            
+        </div>
+    </main>
+    <button id="scrollToTopBtn" title="Go to top">Top</button>
+
+    <footer>
+        <ul class="socials">
+            <li><a href="https://medium.com/@genocous">Blog</a></li>
+            <li><a href="https://twitter.com/genocous16">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/eugene-cousino/">LinkedIn</a></li>
+        </ul>
+        <div class="footer-content">
+            <h2>Stuff+ Project</h2>
+            <p>This site hosts a Stuff+ analysis of the entire 2023 season. We used Fangraphs for informational content, as well as Baseball Savant for video. Photos belong to their respective owners.
+            </p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Site created by Eugene Cousino and Ian Chu. Feel free to contact us with questions: genocous@umich.edu, mrianchu@umich.edu</p>
+        </div>
+    </footer>
+</body>
+</html>

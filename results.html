@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel = "stylesheet" type="text/css" href = "css/reset.css">
+    <link rel = "stylesheet" type="text/css" href = "css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <a href="#main" class="skip-link">Skip to Main Content</a>
+        <button class="hamburger" aria-label="Menu" id="menuToggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <nav class = "navigation" id="navigation">
+            <ul class= "navigation_ul">
+                <li><a href = "intro.html">Home</a></li>
+                <li><a href = "methodology.html">Methodology</a></li>
+                <li><a href = "video_breakdown.html">Video Breakdown</a></li>
+                <li><a href = "machine_learning_explanation.html">Machine Learning</a></li>
+                <li><a href = "comparison.html">Comparison</a></li>
+                <li><a href = "results.html" class = "current">Results</a></li>
+                <li><a href = "visualizations.html">Additional Questions?</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main id = "main" class = "intro-results">
+        <div class = "overview">
+            <h1 class = "intro-h1">Results</h1>
+        </div>
+        <button id="grayscaleBtn">Grayscale On/Off</button>
+        <section class = 'text'>
+            <details>
+                <summary>Modeling</summary>
+                <p>After running the XGBoost model on the dataframe, I obtained the following results:</p>
+                <ul>
+                    <li>Log Loss: 0.46</li>
+                    <li>AUC-ROC: 0.59</li>
+                </ul>
+                <p>Put a paragraph here about determining the effectiveness of the model based on those metrics. </p>
+            </details>
+            <details>
+                <summary>Feature Importances</summary>
+                <p>Here are the features that I used and their measured importance to the model:</p>
+                <img src="Python Code/feature_importances.png" alt="Feature Importances of the model">
+                <p>Put a paragraph here about how I found the feature importances and what they mean in the context of machine learning.</p>
+            </details>
+            <details>
+                <summary>Distribution of Stuff+</summary>
+                <p>Here is a histogram of the Stuff+ values for the 2023 season:</p>
+                <img src="Python Code/stuff_plus_distribution.png" alt="Histogram of Stuff+ values">
+                <img src="Python Code/boxplot.png" alt="Boxplot of Stuff+ values">
+                <p>Put a paragraph here about the distribution of Stuff+ values and what it means for the 2023 season. Note that it is centered around 100.</p>
+            </details>
+            <details>
+                <summary>Stuff+ Leaderboard</summary>
+                <p>Here are the top 10 pitchers in Stuff+ for the 2023 season:</p>
+                <img src="Python Code/top_10.png" alt="Stuff+ Leaderboard">
+                <p>Put a paragraph here about the top 10 pitchers in Stuff+ and what it means for the 2023 season. Note that the top pitcher has a Stuff+ of 120.</p>
+            </details>
+            <details>
+                <summary>Stuff+ Improvements Needed</summary>
+                <p>Here are the pitchers with the most room for improvement in Stuff+ for the 2023 season:</p>
+                <img src="Python Code/bottom_10.png" alt="Stuff+ Improvements Needed">
+                <p>Put a paragraph here about the pitchers with the most room for improvement in Stuff+ and what it means for the 2023 season. Note that the bottom pitcher has a Stuff+ of 80.</p>
+            </details>
+            <details>
+                <summary>Stuff+ vs. Velocity</summary>
+                <p>Here is a scatter plot of Stuff+ vs. Velocity for the 2023 season:</p>
+                <img src="Python Code/stuff_vs_velocity.png" alt="Stuff+ vs. ERA Scatter Plot">
+                <p>Put a paragraph here about the relationship between Stuff+ and ERA and what it means for the 2023 season. Note that there is a negative correlation between the two variables.</p>
+            </details>
+            <details>
+                <summary>Stuff+ vs. Horizontal Break</summary>
+                <p>Here is a scatter plot of Stuff+ vs. Horizontal Break for the 2023 season:</p>
+                <img src="Python Code/stuff_vs_HB.png" alt="Stuff+ vs. ERA Scatter Plot">
+                <p>Put a paragraph here about the relationship between Stuff+ and ERA and what it means for the 2023 season. Note that there is a positive correlation between the two variables.</p>
+            </details>
+            <details>
+                <summary>Stuff+ vs. Induced Vertical Break</summary>
+                <p>Here is a scatter plot of Stuff+ vs. Induced Vertical Break for the 2023 season:</p>
+                <img src="Python Code/stuff_vs_IVB.png" alt="Stuff+ vs. ERA Scatter Plot">
+                <p>Put a paragraph here about the relationship between Stuff+ and ERA and what it means for the 2023 season. Note that there is a positive correlation between the two variables. Explain the induced part of induced vertical break. </p>
+            </details>
+            <details>
+                <summary>Average Stuff+ per Fastball type</summary>
+                <p>Here is a bar chart of the average Stuff+ per Fastball type for the 2023 season:</p>
+                <img src="Python Code/avg_stuff+_fb_type.png" alt="Average Stuff+ per Fastball type">
+                <p>Put a paragraph here about the average Stuff+ per Fastball type and what it means for the 2023 season. Note that the average Stuff+ is highest for the Cutter.</p>
+            </details>
+            <details>
+                <summary>Average Stuff+ per swing event</summary>
+                <p>Here is a bar chart of the average Stuff+ per swing event for the 2023 season:</p>
+                <img src="Python Code/avg_stuff=_per_event.png" alt="Average Stuff+ per swing event">
+                <p>Put a paragraph here about the average Stuff+ per swing event and what it means for the 2023 season. Note that the average Stuff+ is highest for the swing and miss event.</p>
+            </details>
+            <details>
+                <summary>Variable Relationships</summary>
+                <p>Here is a correlation heat map of all the variables that went into this model, plus Stuff+</p>
+                <img src="Python Code/correlation_heatmap.png" alt="Correlation Heat Map">
+                <p>Put a paragraph here about the relationships between the variables and Stuff+ and what it means for the 2023 season. Note that there are some strong correlations between variables.</p>
+            </details>
+            <details>
+                <summary>Stuff+ Averages per Month</summary>
+                <p>Here is a line graph of the average Stuff+ per month for the 2023 season:</p>
+                <img src="Python Code/avg_stuff+_per_month.png" alt="Stuff+ Averages per Month">
+            </details>
+
+            <details>
+                <summary>Modeling Improvements</summary>
+                <p>Here are some potential improvements that could be made to the model:</p>
+                <ul>
+                    <li>Feature Engineering: Create new features that could be more predictive of Stuff+</li>
+                    <li>Hyperparameter Tuning: Adjust the hyperparameters of the model to improve performance</li>
+                    <li>Model Selection: Try different machine learning models to see if they perform better</li>
+                </ul>
+                <p>Put a paragraph here about how these improvements could help the model and what it means for the 2023 season.</p>
+
+            </details>
+        </section>
+
+        <button id="scrollToTopBtn" title="Go to top">Top</button>
+    </main>
+
+    <footer>
+        <ul class="socials">
+            <li><a href="https://medium.com/@genocous">Blog</a></li>
+            <li><a href="https://twitter.com/genocous16">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/eugene-cousino/">LinkedIn</a></li>
+        </ul>
+        <div class="footer-content">
+            <h2>Stuff+ Project</h2>
+            <p>This site hosts a Stuff+ analysis of the entire 2023 season. We used Fangraphs for informational content, as well as Baseball Savant for video. Photos belong to their respective owners.
+            </p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Site created by Eugene Cousino and Ian Chu. Feel free to contact us with questions: genocous@umich.edu, mrianchu@umich.edu</p>
+        </div>
+    </footer>
+
+    
+<script src="js/script.js" defer></script>
+
+
+</body>
+</html>

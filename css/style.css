@@ -1,0 +1,664 @@
+/* Apply grayscale filter to images */
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    z-index: 9999; 
+}
+
+
+/* Form styling */
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #e9e3e3eb;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3; /* Darker shade of blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-button:hover {
+    background-color: #003d80; /* Darker shade of blue on hover */
+}
+
+
+#scrollToTopBtn:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+#successMessage {
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+/**/
+
+.skip-link {
+    position: absolute;
+    left: -100000px;
+}
+
+.text {
+    padding: 50px;
+}
+
+.overview{
+    background-attachment: fixed; /* Parallax effect */     
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: #ffffff; /* White text */
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 400px;                /* Parallax effect */
+}
+
+
+.intro-main .overview {
+    display: grid;
+    grid-column: 1 / -1;
+    background-image: url('../images/ballpark_sunset.jpg');
+    padding-top: 20%;
+}
+  
+
+.intro-video .overview {
+    display: grid;
+    grid-column: 1 / -1;
+    background-image: url('../images/orioles.jpg');
+    padding-top: 20%;
+}
+
+.intro_ml_explanation .overview {
+    display: grid;
+    grid-column: 1 / -1;
+    background-image: url('../images/dbacks.jpg');
+    padding-top: 20%;
+}
+
+.intro-methodology .overview {
+    display: grid;
+    grid-column: 1 / -1;
+    background-image: url('../images/cubs.jpg');
+    padding-top: 20%;
+}
+
+.intro-comparison .overview {
+    display: grid;
+    grid-column: 1 / -1;
+    background-image: url('../images/dodgers.jpg');
+    padding-top: 20%;
+}
+
+.intro-results .overview {
+    display: grid;
+    grid-column: 1 / -1;
+    background-image: url('../images/methodology.jpg');
+    padding-top: 20%;
+}
+
+.intro-visuals .overview {
+    display: grid;
+    grid-column: 1 / -1;
+    background-image: url('../images/royals.jpg');
+    padding-top: 20%;
+}
+
+body{
+    font-size: 20px;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+.skip-link:focus {
+    position: static;
+    left: 40px;
+    top: 40px; 
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 1;
+}
+/* Footer Styling */
+
+footer {
+    background-color: #15151e;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    width: 95%;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+.socials {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.footer-content h2 {
+    margin: 0 20px 0 0;
+    color: white;
+    font-size: 25px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 10px;
+}
+
+.socials {
+    list-style: none;
+}
+
+.socials li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.intro-h1 {
+    margin-top: 150px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd; 
+    padding-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #444; 
+    border-bottom: 2px solid #ddd; 
+    padding-bottom: 5px;
+}
+
+div{
+    padding: 10px 15px;
+    margin: 0;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #007BFF; 
+}
+
+/* methodology styling */
+details {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: max-height 3s ease-in-out;
+    max-height: 60px; 
+}
+
+details[open] {
+    max-height: 1000px; 
+}
+
+summary {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+details p {
+    padding: 10px;
+    margin: 0;
+    color: #333;
+}
+
+
+/* Videos page styling*/
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+section p {
+    padding-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+section ul li {
+    padding: 5px 20px;
+    font-size: 18px;
+} 
+
+.top-row ul li:first-child{
+    font-size: 30px;
+    text-decoration: underline;
+    margin-top: 20px;
+    text-align: left;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+
+.video-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+    
+.video-container {
+    flex: 1;
+    text-align: center;
+}
+    
+.video-container video {
+    width: 90%;
+}
+
+
+
+/* In Text Link Stying */
+details a {
+    color: inherit; 
+}
+
+/* Change link color and font weight on hover */
+details a:hover {
+    color: blue; 
+    font-weight: bold; 
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto;
+    }
+  
+    .skip a{
+      -webkit-transition: none; 
+      transition: none;        
+     }
+  
+
+    header{
+      background-attachment: initial;
+    }
+}
+
+
+
+/* Default styles for hamburger menu (mobile view) */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 5px 0;
+}
+
+/* Hide the desktop navigation */
+.navigation ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out; 
+}
+
+/* Show the mobile navigation when the menu is toggled */
+.navigation ul.show {
+    max-height: 500px; 
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+/* Style each list item */
+.navigation ul.show li {
+    margin: 5px 0;
+    padding: 5px;
+    list-style-type: none;
+}
+
+/* Style links inside the dropdown menu */
+.navigation ul.show li a {
+    color: #333; 
+    text-decoration: none; 
+    font-size: 16px; 
+    display: block; 
+    padding: 8px; 
+    border-radius: 3px; 
+}
+
+.navigation ul.show li a:hover {
+    background-color: #e0e0e0; 
+    color: #000; 
+}
+
+/* Apply grayscale filter to images */
+.grayscale {
+    filter: grayscale(100%);
+}
+
+
+/*Desktop view*/
+@media screen and (min-width: 992px) {
+    .hamburger {
+        display: none; /* Hide hamburger icon in desktop view */
+    }
+
+    .navigation ul {
+        margin: 0;
+        list-style-type: none; 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+        justify-items: center;
+        background-color: lightgray; 
+        padding: 10px;
+        max-height: initial; 
+    }
+
+    /*remove underline and change color for link*/    
+    .navigation ul li a {
+        text-decoration: none; 
+        color: black; 
+        font-size: large;
+    }
+
+    /*make links blue and bold on hover*/
+    .navigation ul li a:hover {
+        color: blue;
+        font-weight: bold; 
+    }
+
+    /* active page link with bold and underline*/
+    .navigation ul li a.current {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+
+    section .top-row {
+        display: flex;
+    }
+
+    section h2 {
+        font-size: 30px;
+        text-decoration: underline;
+        margin-top: 20px;
+        text-align: left;
+        padding-bottom: 5px;
+        padding-left: 20px;
+    }
+    
+    section p {
+        width: 95%;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+
+    section ul {
+        list-style-type: none; 
+        padding: 0; 
+        margin: 0;
+        text-align: left; 
+    }
+
+    section ul li {
+        padding: 5px 20px;
+        font-size: 20px;
+        white-space: nowrap; 
+    }
+
+    .video-description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+        
+    .video-container {
+        flex: 1;
+        text-align: center;
+    }
+        
+    .video-container video {
+        width: 40%;
+    }
+
+    .overview{
+        background-attachment: fixed; /* Parallax effect */     
+        background-position: center;  /* Parallax effect */
+        background-repeat: no-repeat; /* Parallax effect */
+        background-size: cover;       /* Parallax effect */
+        color: #ffffff; /* White text */
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 300px;                /* Parallax effect */
+    }
+
+    .intro-main .overview {
+        display: grid;
+        grid-column: 1 / -1;
+        background-image: url('../images/ballpark_sunset.jpg');
+        background-size: 100% auto;
+        padding-top: 20%;
+      
+    }
+      
+    
+    .intro-video .overview {
+        display: grid;
+        grid-column: 1 / -1;
+        background-image: url('../images/orioles.jpg');
+        background-size: 100% auto;
+        padding-top: 20%;
+    }
+    
+    .intro_ml_explanation .overview {
+        display: grid;
+        grid-column: 1 / -1;
+        background-image: url('../images/dbacks.jpg');
+        background-size: 100% auto;
+        padding-top: 20%;
+    }
+    
+    .intro-methodology .overview {
+        display: grid;
+        grid-column: 1 / -1;
+        background-image: url('../images/cubs.jpg');
+        background-size: 100% auto;
+        padding-top: 20%;
+    }
+    
+    .intro-comparison .overview {
+        display: grid;
+        grid-column: 1 / -1;
+        background-image: url('../images/dodgers.jpg');
+        background-size: 100% auto;
+        padding-top: 20%;
+    }
+    
+    .intro-results .overview {
+        display: grid;
+        grid-column: 1 / -1;
+        background-image: url('../images/methodology.jpg');
+        background-size: 100% auto;
+        padding-top: 20%;
+    }
+    
+    .intro-visuals .overview {
+        display: grid;
+        grid-column: 1 / -1;
+        background-image: url('../images/royals.jpg');
+        background-size: 100% auto;
+        padding-top: 20%;
+    }
+
+    .intro-h1 {
+        margin-top: 150px;
+        margin-bottom: 15px;
+        font-size: 60px;
+        border-bottom: 2px solid #ddd; 
+        padding-bottom: 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* changing text styling */
+    details {
+        max-height: none; /* Allow the content to be fully visible */
+        overflow: visible; /* Make content visible */
+        transition: none; /* Disable transition effects */
+        border: none; /* Remove border if you prefer */
+        padding: 0; /* Adjust padding */
+    }
+
+    /* Style the summary element */
+    summary {
+        list-style: none; /* Hide the disclosure triangle */
+        cursor: default; /* Change cursor to default */
+        padding-bottom: 5px; /* Add padding at the bottom */
+        border-bottom: 2px solid #ddd; /* Add a border at the bottom */
+    }
+
+    /* Reset padding for paragraphs in details */
+    details p {
+        padding: 0; /* Adjust padding */
+    }
+    
+    details summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    /* Footer Styling */
+
+    footer {
+        background-color: #15151e;
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .footer-content {
+        width: 95%;
+        margin: auto;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .socials {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        font-size: 30px;
+        text-decoration: underline;
+    }
+
+    .footer-content h2 {
+        margin: 0 20px 0 0;
+        color: white;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 15px;
+    }
+    
+}
